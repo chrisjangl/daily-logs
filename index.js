@@ -24,6 +24,14 @@ const bodyParser = require('body-parser')
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: false}))
 
+// view engine setup
+app.set("view engine", "ejs");
+
+// index
+app.get('/', (req, res) => {
+    res.render('index')
+})
+
 // route to create new log
 app.post('/logs/create', (req, res) => {
     date = req.body.date,
