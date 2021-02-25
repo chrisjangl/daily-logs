@@ -1,18 +1,40 @@
 <html>
     <head>
         <title>Daily Logs | Create a new Log</title>
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>Holler, World</h1>
-        <form action="">
-            <label for="date">Date:</label>
-            <input type="text" name="date" id="date"/>
-            <label for="client">Client:</label>
-            <input type="text" name="client" id="client">
-            <label for="project">Project:</label>
-            <input type="text" name="project" id="project">
-            <label for="Notes">Notes:</label>
-            <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+        <h1>What did you do today?</h1>
+        <form method="POST" action="logs/create">
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="date" value="<%= date %>"/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-field col-md-6">
+                    <label for="client">Client:</label>
+                    <input type="text" name="client" id="client">
+                </div>
+                <div class="form-fields col-md-6">
+                    <label for="project">Project:</label>
+                    <input type="text" name="project" id="project">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="Notes">Notes:</label>
+                    <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <input type="submit" value="Log it">
+                </div>
+            </div>
         </form>
     </body>
 </html>

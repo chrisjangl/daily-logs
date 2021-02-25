@@ -1,0 +1,65 @@
+html {
+    background: #eee;
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+    color: #7e544d;
+    font-family: sans-serif;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], textarea, input[type="date"] {
+    border: 1px solid #c3c3c3;
+    border-radius: 1px;
+    outline: none;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+input[type="date"] {
+    background: transparent;
+    border: 0;
+    width: auto;
+}
+
+input[type="submit"] {
+    width: auto;
+    display: block;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    outline: 0;
+    border: 0;
+    border-radius: 2px;
+    background: #7e544d;
+    color: #e1e1e1;
+}
+
+label {
+    display: block;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.form-field.col-md-6 {
+    width: 48%;
+    /* padding-left: 2%;
+    padding-right: 2%; */
+}

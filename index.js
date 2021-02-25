@@ -25,6 +25,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: false}))
 
 // view engine setup
+app.use(express.static(__dirname + '/public'));
 app.set("view engine", "ejs");
 
 // index
