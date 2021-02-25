@@ -9,6 +9,11 @@
             <div class="form-row">
                 <div class="form-field">
                     <label for="date">Date:</label>
+                    <% let currentDate = new Date();   
+                        let year = currentDate.getFullYear(),
+                            month = currentDate.getMonth() + 1,
+                            day = currentDate.getDate(),
+                            date = year + '-' + ('0' + (month)).slice(-2) + '-' + ('0' + day).slice(-2) %>
                     <input type="date" name="date" id="date" value="<%= date %>"/>
                 </div>
             </div>
